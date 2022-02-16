@@ -10,27 +10,36 @@
     <button id="go">my button</button>
 
     <script defer>
+
+        /* playing with boolean (true/false) values
+        for conditional statements */
         const mynum = 5;
 
         if(mynum > 10) {
             console.log(mynum, "mynum is greater than zero");
         } else if (mynum === 5) {
             console.log(`${mynum} is 5`);
-        } else if (mynum == "green") {
-            console.log("mynum is something not 5 and less than 10");
+        } else if (mynum == NaN) {
+            console.log("mynum is something other than a number");
+        } else {
+            console.log("The catchall condition");
         }
 
         console.log("code after condition");
 
-        
+
+        /* A compount conditional expression  
+        - string concatenation vs. string template */
         if ((mynum >= 10) || (mynum <= 5)) {
-            //console.log(`${mynum} is between 0 and 5, both included`);
+            //console.log(mynum + " is between 0 and 5, both included");
+            console.log(`${mynum} is between 0 and 5, both included`);
         }
 
-        //we can also check the boolena condition if an element exisits on the page. If so, run some code when the element is clicked.
+        /* we can also check the boolean condition if an element 
+        exists on the page. If so, run some code when the element is clicked. */
         const button = document.getElementById('go');
         if (button) {
-            console.log( "we have no button!");
+            console.log( "we have a button!");
             button.onclick = function() {
                 alert('hello');
             }
