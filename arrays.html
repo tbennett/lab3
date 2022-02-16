@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    
+    <button id="swap">Change Pic</button>
+    <img id="myPic" src="i/crowd.jpg" alt="starter picture">
+
+<script defer>
+    const myArray = ["jim", "jill", "jaime"];
+    // getting info out of arrays requires a 
+    //numerical location. Arrays locations start counting at zero.
+    console.log(myArray[0]);
+
+    //adding to an array
+    //myArray.push('tim');
+    myArray.unshift('tim');
+    console.log(myArray);
+
+    //removing from an array
+    myArray.pop(); // remove from end
+    console.log(myArray);
+
+    myArray.shift();
+    console.log(myArray);
+
+
+/* a simple image swapper */
+    var i = 1; //the first image (0) is already visible.
+    const pics = ["i/crowd.jpg", "i/bassist.jpg", "i/concert.jpg", "i/guitarist.jpg"];
+    const myPic = document.getElementById("myPic");
+    const myButton = document.getElementById("swap");
+    
+    myButton.addEventListener("click", (e) => {
+        if(i >= pics.length) {
+           i = 0; 
+        }
+        myPic.src = pics[i];
+        i++;
+    });
+</script>
+
+
+</body>
+</html>
+
+
+<!-- 
+const pics = ["i/crowd.jpg", "i/bassist.jpg", "i/concert.jpg", "i/guitarist.jpg"];
+
+<img  id="myPic" src="" alt="">
+
+myPic.src = 
+
+//step1
+
+//step2
+
+-->
