@@ -29,13 +29,27 @@
     myArray.shift();
     console.log(myArray);
 
+    myArray[1] = "judy";
+    console.log(myArray);
+
+    
+
 
 /* a simple image swapper */
-    var i = 1; //the first image (0) is already visible.
+/* This puts all of the pieces together in a simple way */
+
+//the first image (0) is already visible, so we set the 
+//variable to the value to show the 2nd photo
+    var i = 1; 
+
+    // use an array to hold the urls of all photos
     const pics = ["i/crowd.jpg", "i/bassist.jpg", "i/concert.jpg", "i/guitarist.jpg"];
+    
+    //create shortcut constants for page elements
     const myPic = document.getElementById("myPic");
     const myButton = document.getElementById("swap");
     
+    // create event listener for changing photos on button click
     myButton.addEventListener("click", (e) => {
         if(i >= pics.length) {
            i = 0; 
