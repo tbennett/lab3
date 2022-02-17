@@ -1,51 +1,49 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 3 - Conditions</title>
-</head>
-<body>
-    <button id="go">my button</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lab 3 - Conditions</title>
+    </head>
+    <body>
+        <button id="go">my button</button>
 
-    <script defer>
-
-        /* playing with boolean (true/false) values
+        <script defer>
+            /* playing with boolean (true/false) values
         for conditional statements */
-        const mynum = 5;
+            const mynum = 5;
 
-        if(mynum > 10) {
-            console.log(mynum, "mynum is greater than zero");
-        } else if (mynum === 5) {
-            console.log(`${mynum} is 5`);
-        } else if (mynum == NaN) {
-            console.log("mynum is something other than a number");
-        } else {
-            console.log("The catchall condition");
-        }
-
-        console.log("code after condition");
-
-
-        /* A compount conditional expression  
-        - string concatenation vs. string template */
-        if ((mynum >= 10) || (mynum <= 5)) {
-            //console.log(mynum + " is between 0 and 5, both included");
-            console.log(`${mynum} is between 0 and 5, both included`);
-        }
-
-        /* we can also check the boolean condition if an element 
-        exists on the page. If so, run some code when the element is clicked. */
-        const button = document.getElementById('go');
-        if (button) {
-            console.log( "we have a button!");
-            button.onclick = function() {
-                alert('hello');
+            if (mynum > 10) {
+                console.log(mynum, "mynum is greater than zero");
+            } else if (mynum === 5) {
+                console.log(`${mynum} is 5`);
+            } else if (mynum == NaN) {
+                console.log("mynum is something other than a number");
+            } else {
+                console.log("The catchall condition");
             }
-        }
 
-    </script>
-    
-</body>
+            console.log("code after condition");
+
+            /* A compount conditional expression  
+        - string concatenation vs. string template */
+            if (mynum >= 10 || mynum <= 5) {
+                //console.log(mynum + " is between 0 and 5, both included");
+                console.log(`${mynum} is between 0 and 5, both included`);
+            }
+
+            /* we can also check the boolean condition if an element 
+        exists on the page. If so, run some code when the element is clicked. */
+            const button = document.getElementById("go");
+            if (button) {
+                console.log("we have a button!");
+                button.onclick = function () {
+                    alert("hello");
+                };
+            }
+        </script>
+    </body>
 </html>

@@ -1,64 +1,64 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arrays</title>
-</head>
-<body>
-    
-    <button id="swap">Change Pic</button>
-    <img id="myPic" src="i/crowd.jpg" alt="starter picture">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Arrays</title>
+    </head>
+    <body>
+        <button id="swap">Change Pic</button>
+        <img id="myPic" src="i/crowd.jpg" alt="starter picture" />
 
-<script defer>
-    const myArray = ["jim", "jill", "jaime"];
-    // getting info out of arrays requires a 
-    //numerical location. Arrays locations start counting at zero.
-    console.log(myArray[0]);
+        <script defer>
+            const myArray = ["jim", "jill", "jaime"];
+            // getting info out of arrays requires a
+            //numerical location. Arrays locations start counting at zero.
+            console.log(myArray[0]);
 
-    //adding to an array
-    //myArray.push('tim');
-    myArray.unshift('tim');
-    console.log(myArray);
+            //adding to an array
+            //myArray.push('tim');
+            myArray.unshift("tim");
+            console.log(myArray);
 
-    //removing from an array
-    myArray.pop(); // remove from end
-    console.log(myArray);
+            //removing from an array
+            myArray.pop(); // remove from end
+            console.log(myArray);
 
-    myArray.shift();
-    console.log(myArray);
+            myArray.shift();
+            console.log(myArray);
 
-    myArray[1] = "judy";
-    console.log(myArray);
+            myArray[1] = "judy";
+            console.log(myArray);
 
-    
+            /* a simple image swapper */
+            /* This puts all of the pieces together in a simple way */
 
+            //the first image (0) is already visible, so we set the
+            //variable to the value to show the 2nd photo
+            var i = 1;
 
-/* a simple image swapper */
-/* This puts all of the pieces together in a simple way */
+            // use an array to hold the urls of all photos
+            const pics = [
+                "i/crowd.jpg",
+                "i/bassist.jpg",
+                "i/concert.jpg",
+                "i/guitarist.jpg",
+            ];
 
-//the first image (0) is already visible, so we set the 
-//variable to the value to show the 2nd photo
-    var i = 1; 
+            //create shortcut constants for page elements
+            const myPic = document.getElementById("myPic");
+            const myButton = document.getElementById("swap");
 
-    // use an array to hold the urls of all photos
-    const pics = ["i/crowd.jpg", "i/bassist.jpg", "i/concert.jpg", "i/guitarist.jpg"];
-    
-    //create shortcut constants for page elements
-    const myPic = document.getElementById("myPic");
-    const myButton = document.getElementById("swap");
-    
-    // create event listener for changing photos on button click
-    myButton.addEventListener("click", (e) => {
-        if(i >= pics.length) {
-           i = 0; 
-        }
-        myPic.src = pics[i];
-        i++;
-    });
-</script>
-
-
-</body>
+            // create event listener for changing photos on button click
+            myButton.addEventListener("click", (e) => {
+                if (i >= pics.length) {
+                    i = 0;
+                }
+                myPic.src = pics[i++];
+            });
+        </script>
+    </body>
 </html>

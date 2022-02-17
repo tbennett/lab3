@@ -1,55 +1,44 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
-    <link rel="stylesheet" href="c/main.css">
-</head>
-<body>
-    <section class="container">
-        <div id="b1" class="box">box 1</div>
-        <div id="b2" class="box">box 2</div>
-        <div id="b3" class="box">box 3</div>
-        <div id="b4" class="box">box 4</div>
-    </section>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Events</title>
+        <link rel="stylesheet" href="c/main.css" />
+    </head>
+    <body>
+        <section class="container">
+            <div id="b1" class="box">box 1</div>
+            <div id="b2" class="box">box 2</div>
+            <div id="b3" class="box">box 3</div>
+            <div id="b4" class="box">box 4</div>
+        </section>
 
-    <script>
-        //create shortcut constants
-        const b1 = document.getElementById('b1');
-        const b2 = document.getElementById('b2');
-        const b3 = document.getElementById('b3');
-        const b4 = document.getElementById('b4');
-        const container = document.querySelector('.container');
+        <script>
+            //create shortcut constants
+            const b1 = document.getElementById("b1");
+            const b2 = document.getElementById("b2");
+            const b3 = document.getElementById("b3");
+            const b4 = document.getElementById("b4");
+            const container = document.querySelector(".container");
 
-        // an example of how to write an inline event handler
-        b1.onclick = function() {
+            // an example of how to write an inline event handler
+            b1.onclick = function () {};
 
-        }
+            // example event listeners with arrow functions
+            // "e" is the event object automatically passed
+            //to the arrow function
+            b2.addEventListener("click", (e) => {});
 
-        // example event listeners with arrow functions
-        // "e" is the event object automatically passed
-        //to the arrow function 
-        b2.addEventListener('click', (e) => {
+            // an alternative to arrow function
+            b3.addEventListener("mouseover", function (e) {});
 
-        });
+            b4.addEventListener("mouseout", (e) => {});
 
-        // an alternative to arrow function
-        b3.addEventListener('mouseover', function (e) {
-
-        });
-
-        b4.addEventListener('mouseout', (e) => {
-
-        });
-
-        container.addEventListener('mousedown', (e) => {
-
-        });
-
-
-
-    </script>
-</body>
+            container.addEventListener("mousedown", (e) => {});
+        </script>
+    </body>
 </html>
