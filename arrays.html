@@ -36,10 +36,6 @@
             /* a simple image swapper */
             /* This puts all of the pieces together in a simple way */
 
-            //the first image (0) is already visible, so we set the
-            //variable to the value to show the 2nd photo
-            var i = 1;
-
             // use an array to hold the urls of all photos
             const pics = [
                 "i/crowd.jpg",
@@ -51,12 +47,18 @@
             //create shortcut constants for page elements
             const myPic = document.getElementById("myPic");
             const myButton = document.getElementById("swap");
-
+            //the first image (0) is already visible, so we set the
+            //variable to the value to show the 2nd photo
+            let i = 1;
             // create event listener for changing photos on button click
             myButton.addEventListener("click", (e) => {
+                // if i is out of bounds (not a real array index)
+                // set to to the first array item/image
                 if (i >= pics.length) {
                     i = 0;
                 }
+                //change the image to the current value of i
+                // then increment the value of i so it's ready for the next image.
                 myPic.src = pics[i++];
             });
         </script>
